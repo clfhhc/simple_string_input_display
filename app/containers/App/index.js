@@ -15,6 +15,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
+import Header from 'containers/Header/index';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
@@ -27,6 +28,7 @@ export default function App() {
           content="A Sample App for DMI Software Intro Assignment"
         />
       </Helmet>
+      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />
