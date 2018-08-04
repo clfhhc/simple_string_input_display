@@ -12,6 +12,7 @@
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
@@ -20,6 +21,12 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 export default function App() {
   return (
     <div>
+      <Helmet titleTemplate="%s | Sample App" defaultTitle="Sample App">
+        <meta
+          name="description"
+          content="A Sample App for DMI Software Intro Assignment"
+        />
+      </Helmet>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />
