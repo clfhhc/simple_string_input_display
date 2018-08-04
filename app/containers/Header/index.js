@@ -2,8 +2,8 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import H1 from 'components/H1/index';
-// import NavBar from './NavBar';
-// import NavBarLink from './NavBarLink';
+import NavBar from './NavBar';
+import NavBarLink from './NavBarLink';
 import messages from './messages';
 
 /*
@@ -19,6 +19,17 @@ class Header extends React.Component {
         <H1>
           <FormattedMessage {...messages.title} />
         </H1>
+        <NavBar>
+          <NavBarLink to="/">
+            <FormattedMessage {...messages.home} />
+          </NavBarLink>
+          <NavBarLink to="/input">
+            <FormattedMessage {...messages.input} />
+          </NavBarLink>
+          <NavBarLink to="/inputHistory">
+            <FormattedMessage {...messages.inputHistory} />
+          </NavBarLink>
+        </NavBar>
       </div>
     );
   }
