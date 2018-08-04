@@ -10,6 +10,7 @@
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
@@ -18,9 +19,15 @@ import messages from './messages';
 export default class NotFound extends React.PureComponent {
   render() {
     return (
-      <h2>
-        <FormattedMessage {...messages.header} />
-      </h2>
+      <section>
+        <Helmet>
+          <title>Not Found</title>
+          <meta name="description" content="Not Found Page" />
+        </Helmet>
+        <h2>
+          <FormattedMessage {...messages.header} />
+        </h2>
+      </section>
     );
   }
 }
