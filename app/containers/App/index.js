@@ -17,7 +17,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Header from 'containers/Header/Loadable';
 import HomePage from 'containers/HomePage/Loadable';
-import InputPage from 'containers/InputPage/Loadable';
+import ChangeInputPage from 'containers/ChangeInputPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export default function App() {
@@ -32,7 +32,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/input" component={InputPage} />
+        <Route exact path="/change_input" component={ChangeInputPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

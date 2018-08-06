@@ -9,8 +9,8 @@ export default class InputPage extends React.PureComponent {
     return (
       <section>
         <Helmet>
-          <title>Input Page</title>
-          <meta name="description" content="Input Page" />
+          <title>Change Input Page</title>
+          <meta name="description" content="Change Input Page" />
         </Helmet>
         <h2>
           <FormattedMessage {...messages.header} />

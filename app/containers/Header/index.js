@@ -23,10 +23,10 @@ class Header extends React.Component {
           <NavBarLink to="/">
             <FormattedMessage {...messages.home} />
           </NavBarLink>
-          <NavBarLink to="/input">
-            <FormattedMessage {...messages.input} />
+          <NavBarLink to="/change_input">
+            <FormattedMessage {...messages.changeInput} />
           </NavBarLink>
-          <NavBarLink to="/inputHistory">
+          <NavBarLink to="/input_history">
             <FormattedMessage {...messages.inputHistory} />
           </NavBarLink>
         </NavBar>
