@@ -9,9 +9,9 @@ export default defineMessages({
     id: 'app.components.Header.home',
     defaultMessage: 'Home',
   },
-  input: {
-    id: 'app.components.Header.input',
-    defaultMessage: 'Input',
+  changeInput: {
+    id: 'app.components.Header.changeInput',
+    defaultMessage: 'ChangeInput',
   },
   inputHistory: {
     id: 'app.components.Header.inputHistory',
