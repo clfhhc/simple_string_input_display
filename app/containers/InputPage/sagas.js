@@ -10,7 +10,7 @@ import { serverUrl } from 'utils/constants';
 import { getFromUrl, postToUrl } from './apis';
 import { INPUT_PAGE_INSERT, INPUT_PAGE_FETCH_HISTORY } from './constants';
 import { updateHistory, fetchLoading, fetchedError } from './actions';
-import { makeSelectStringToInput } from './selector';
+import { makeSelectStringToInput } from './selectors';
 
 const inputUrl = `${serverUrl}/input`;
 
@@ -41,15 +41,15 @@ export function* insertStringToServer() {
   }
 }
 
-function* insertData() {
+function* insertInput() {
   yield takeLatest(INPUT_PAGE_INSERT, insertStringToServer);
 }
 
-function* fetchData() {
+function* fetchHistory() {
   yield takeLatest(INPUT_PAGE_FETCH_HISTORY, requestHistoryFromServer);
 }
 
 export default {
-  insertData,
-  fetchData,
+  insertInput,
+  fetchHistory,
 };
