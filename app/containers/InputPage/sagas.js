@@ -9,7 +9,12 @@ import {
 import { serverUrl } from 'utils/constants';
 import { getFromUrl, postToUrl } from './apis';
 import { INPUT_PAGE_INSERT, INPUT_PAGE_FETCH_HISTORY } from './constants';
-import { updateHistory, fetchLoading, fetchedError } from './actions';
+import {
+  updateHistory,
+  inputInserted,
+  fetchLoading,
+  fetchedError,
+} from './actions';
 import { makeSelectStringToInput } from './selectors';
 
 const inputUrl = `${serverUrl}/input`;
@@ -35,7 +40,7 @@ export function* insertStringToServer() {
     const task = yield fork(fetchIsLoading);
     yield call(postToUrl, inputUrl, { stringToInput });
     yield cancel(task);
-    // yield call(requestHistoryFromServer);
+    yield put(inputInserted());
   } catch (err) {
     yield put(fetchedError(err));
   }
