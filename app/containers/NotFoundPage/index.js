@@ -12,7 +12,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
-
+import H2 from 'components/H2';
 import messages from './messages';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -24,9 +24,9 @@ export default class NotFound extends React.PureComponent {
           <title>Not Found</title>
           <meta name="description" content="Not Found Page" />
         </Helmet>
-        <h2>
+        <H2>
           <FormattedMessage {...messages.header} />
-        </h2>
+        </H2>
       </section>
     );
   }

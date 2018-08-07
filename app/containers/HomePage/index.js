@@ -12,6 +12,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Helmet } from 'react-helmet';
+import H2 from 'components/H2';
 import messages from './messages';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -26,9 +27,9 @@ export default class HomePage extends React.PureComponent {
             content="A Sample App for DMI Software Intro Assignment Home Page"
           />
         </Helmet>
-        <h2>
+        <H2>
           <FormattedMessage {...messages.header} />
-        </h2>
+        </H2>
       </section>
     );
   }
