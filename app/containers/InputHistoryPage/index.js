@@ -22,7 +22,7 @@ import messages from './messages';
 /* eslint-disable react/prefer-stateless-function */
 export class InputHistoryPage extends React.PureComponent {
   componentDidMount() {
-    // this.props.fetchHistory();
+    this.props.fetchHistory();
   }
 
   render() {
