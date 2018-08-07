@@ -22,7 +22,7 @@ export default styled(NavLink)`
 
   ${props =>
     props.selected &&
-    CSS`
+    `
       border: 2px solid ${props.selectedColor}
     `};
 `;
