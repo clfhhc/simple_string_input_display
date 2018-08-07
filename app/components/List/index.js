@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import ListItem from 'components/ListItem';
 import Ul from './Ul';
 import Wrapper from './Wrapper';
 
 function List(props) {
-  const ComponentToRender = props.component;
   let content = <div />;
 
   if (props.items) {
     content = props.items.map(item => (
-      <ComponentToRender key={`item-${item}`} item={item} />
+      <ListItem key={`item-${item}`}>{item}</ListItem>
     ));
-  } else {
-    content = <ComponentToRender />;
   }
 
   return (
@@ -24,7 +22,6 @@ function List(props) {
 }
 
 List.propTypes = {
-  component: PropTypes.func.isRequired,
   items: PropTypes.array,
 };
 
