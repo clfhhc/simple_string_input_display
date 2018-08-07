@@ -9,7 +9,7 @@ import {
 
 export const initialState = fromJS({
   stringToInput: '',
-  inputHistory: false,
+  inputHistory: ['Hi', 'type'],
   inserting: false,
   error: false,
 });
