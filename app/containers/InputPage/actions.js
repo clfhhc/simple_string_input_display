@@ -3,6 +3,7 @@ import {
   INPUT_PAGE_INSERT,
   INPUT_PAGE_FETCH_HISTORY,
   INPUT_PAGE_FETCHED,
+  INPUT_PAGE_INSERTED,
   INPUT_PAGE_ERROR,
   INPUT_PAGE_LOADING,
 } from './constants';
@@ -30,6 +31,12 @@ export function updateHistory(inputHistory) {
   return {
     type: INPUT_PAGE_FETCHED,
     inputHistory,
+  };
+}
+
+export function inputInserted() {
+  return {
+    type: INPUT_PAGE_INSERTED,
   };
 }
 

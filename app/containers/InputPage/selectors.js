@@ -8,7 +8,7 @@ const makeSelectStringToInput = () =>
 
 const makeSelectInputHistory = () =>
   createSelector(selectInput, inputState =>
-    inputState.get('inputHistory').toArray(),
+    inputState.get('inputHistory').toJS(),
   );
 
 const makeSelectLoading = () =>
