@@ -7,7 +7,9 @@ const makeSelectStringToInput = () =>
   createSelector(selectInput, inputState => inputState.get('stringToInput'));
 
 const makeSelectInputHistory = () =>
-  createSelector(selectInput, inputState => inputState.get('inputHistory'));
+  createSelector(selectInput, inputState =>
+    inputState.get('inputHistory').toArray(),
+  );
 
 const makeSelectLoading = () =>
   createSelector(selectInput, inputState => inputState.get('loading'));
