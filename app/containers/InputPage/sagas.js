@@ -35,7 +35,7 @@ export function* insertStringToServer() {
     const task = yield fork(fetchIsLoading);
     yield call(postToUrl, inputUrl, { stringToInput });
     yield cancel(task);
-    yield call(requestHistoryFromServer);
+    // yield call(requestHistoryFromServer);
   } catch (err) {
     yield put(fetchedError(err));
   }
