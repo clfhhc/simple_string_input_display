@@ -18,6 +18,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from 'containers/Header/Loadable';
 import HomePage from 'containers/HomePage/Loadable';
 import ChangeInputPage from 'containers/ChangeInputPage/Loadable';
+import InputHistoryPage from 'containers/InputHistoryPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/change_input" component={ChangeInputPage} />
+        <Route exact path="/input_history" component={InputHistoryPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
