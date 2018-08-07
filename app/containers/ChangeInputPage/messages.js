@@ -10,4 +10,8 @@ export default defineMessages({
     id: 'app.components.ChangeInputPage.header',
     defaultMessage: 'Change Input Page',
   },
+  inputLabel: {
+    id: 'app.components.ChangeInputPage.inputLabel',
+    defaultMessage: 'String to be insert:  ',
+  },
 });
