@@ -12,6 +12,6 @@ export default defineMessages({
   },
   title: {
     id: 'app.components.InputHistoryPage.title',
-    defaultMessage: 'InputHistory:  ',
+    defaultMessage: 'Input History:  ',
   },
 });
