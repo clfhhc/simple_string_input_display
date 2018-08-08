@@ -139,6 +139,7 @@
       "<rootDir>/internals/testing/enzyme-setup.js"
     ],
     "testRegex": "tests/.*\\.test\\.js$",
+    "testURL": "http://localhost:3000/",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
