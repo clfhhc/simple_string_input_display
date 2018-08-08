@@ -36,13 +36,15 @@ export function* requestHistoryFromServer() {
 
 export function* insertStringToServer() {
   const stringToInput = yield select(makeSelectStringToInput());
-  try {
-    const task = yield fork(fetchIsLoading);
-    yield call(postToUrl, inputUrl, { stringToInput });
-    yield cancel(task);
-    yield put(inputInserted());
-  } catch (err) {
-    yield put(fetchedError(err));
+  if (stringToInput) {
+    try {
+      const task = yield fork(fetchIsLoading);
+      yield call(postToUrl, inputUrl, { stringToInput });
+      yield cancel(task);
+      yield put(inputInserted());
+    } catch (err) {
+      yield put(fetchedError(err));
+    }
   }
 }
 

@@ -11,7 +11,7 @@ import {
 export const initialState = fromJS({
   stringToInput: '',
   inputHistory: [],
-  inserting: false,
+  loading: false,
   error: false,
 });
 
