@@ -39,10 +39,10 @@ export class InputHistoryPage extends React.PureComponent {
         <p>
           <FormattedMessage {...messages.title} />
         </p>
-        {(error && <p>something went wrong, please refresh</p>) ||
+        {/* eslint-disable prettier/prettier */
+          (error && <p>something went wrong, please refresh</p>) ||
           (loading && <p>loading history</p>) || (
-          <List items={inputHistory} component={ListItem} />
-        )}
+            <List items={inputHistory} component={ListItem} />)}
       </section>
     );
   }
